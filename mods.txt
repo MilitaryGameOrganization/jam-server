@@ -1,0 +1,122 @@
+mod industrial-craft2-experimental from curse industrial-craft
+    version 2746892 (2.8.170-ex112)
+
+mod applied-energistics-2 from curse applied-energistics-2
+    version 2747063 (rv6-stable-7)
+
+mod buildcraft from curse buildcraft
+    version 3204475 (7.99.24.8)
+
+mod railcraft from curse railcraft
+    version 2687757 (12.0.0)
+
+mod cutall from curse break-all-of-the-same-block-and-more
+    version 2740435 (2.6.6)
+
+mod mineall from curse break-all-of-the-same-block-and-more
+    version 2850631 (2.6.6)
+
+mod baubles from curse baubles
+    version 2518667 (1.5.2)
+
+mod botania from curse botania
+    version 3330934 (364.4)
+
+mod immersive-engineering from curse immersive-engineering
+    version 2974106 (0.12-98)
+
+mod immersive-technology from curse mct-immersive-technology
+    version 3534436 (1.9.99)
+
+mod universal-mod-core from curse universal-mod-core
+    version 3427250 (1.1.3)
+
+mod track-api from curse track-api
+    version 2825260 (1.2-1.12.2)
+
+mod immersive-railroading from curse immersive-railroading
+    version 3437738 (1.9.1)
+
+mod trackside-decor from curse trackside-decor
+    version 3011494 (2.2)
+
+mod visibleray-generator from curse visibleraygenerator
+    version 2447874 (5.0.1)
+
+mod mrtjpcore from curse mrtjpcore
+    version 2735197 (2.1.4.43)
+
+mod codechicken-lib from curse codechicken-lib-1-8
+    version 2779848 (3.2.3.358)
+
+mod forge-multipart from curse forge-multipart-cbe
+    version 2755790 (2.6.2.83)
+
+mod project-red-base from curse project-red-base
+    version 2745545 (4.9.4.120)
+
+mod project-red-integration from curse project-red-integration
+    version 2745548 (4.9.4.120)
+
+mod project-red-world from curse project-red-world
+    version 2745551 (4.9.4.120)
+
+mod project-red-mechanical from curse project-red-mechanical
+    version 2745550 (4.9.4.120)
+
+mod project-red-lighting from curse project-red-lighting
+    version 2745549 (4.9.4.120)
+
+mod galacticraft-core from url "https://micdoodle8.com/new-builds/GC-1.12/280/GalacticraftCore-1.12.2-$version.jar"
+    version 4.0.2.280
+
+mod galacticraft-planets from url "https://micdoodle8.com/new-builds/GC-1.12/280/Galacticraft-Planets-1.12.2-$version.jar"
+    version 4.0.2.280
+
+mod micdoodle-core from url "https://micdoodle8.com/new-builds/GC-1.12/280/MicdoodleCore-1.12.2-$version.jar"
+    version 4.0.2.280
+
+mod forgelin from curse shadowfacts-forgelin
+    version 2727070 (1.8.3)
+
+mod tesla-core-lib from curse tesla-core-lib
+    version 3438487 (1.0.18.28)
+
+mod industrial-foregoing from curse industrial-foregoing
+    version 2745321 (1.12.13-237)
+
+mod redstone-flux from curse redstone-flux
+    version 2920436 (2.1.1.1)
+
+mod cofh-core from curse cofh-core
+    version 2920433 (4.6.6.1)
+
+mod cofh-world from curse cofh-world
+    version 2920434 (1.4.0.1)
+
+mod thermal-foundation from curse thermal-foundation
+    version 2926428 (2.6.7.1)
+
+mod thermal-expansion from curse thermal-foundation
+    version 2926431 (5.5.7.1)
+
+mod mekanism from curse mekanism
+    version 2835175 (9.8.3.390)
+
+# server mod
+
+server mod version-checker from url "https://github.com/noyciy7037/MCMods-Version-Checker/releases/download/$version/ModsVersionChecker-$version.jar"
+    version 1.0.0
+
+# client-only optional mods
+
+# TODO: check if it is static or not
+# optional client mod optifine from url "https://optifine.net/downloadx?f=OptiFine_1.12.2_$version.jar&x=6093fa54e153275b3ea908481d739445"
+#     version HD_U_G5
+
+optional client mod intelli-input from url "http://mcc.mcsv.jp/Files/IntelliInput/IntelliInput-$version-for1.12.2.jar"
+    version 2.6
+
+optional client mod cocoa-input from curse 259700
+    version 2540534 (3.1.5)
+
