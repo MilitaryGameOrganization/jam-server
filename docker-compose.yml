@@ -10,8 +10,6 @@ services:
       - "25581:25565" # minecraft
       - "25583:25575" # rcon
 #      - "25582:9225"  # Prometheus(http)
-    environment:
-      HEAP: 2G
     volumes:
 # TODO: use volume
       - "./save:/save"
