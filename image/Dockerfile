@@ -24,6 +24,7 @@ WORKDIR /server
 
 COPY --from=mods-downloader /mods /server/mods
 COPY server.properties /server/server.properties
+COPY delete-libraries.sh /server/delete-libraries.sh
 
 ARG MOHIST_VERSION
 ARG CLOSER_VERSION
@@ -34,22 +35,8 @@ RUN curl -L "https://mohistmc.com/builds/1.12.2/mohist-1.12.2-$MOHIST_VERSION-se
     > mods/auto-closer.jar \
   && echo "eula=true" > eula.txt \
   && timeout 600s java -Xmx2G -jar mohist.jar \
-  && rm libraries/net/minecraft/1.12.2/minecraft_server.1.12.2.jar \
-  && rm libraries/net/minecraft/launchwrapper/1.12/launchwrapper-1.12.jar \
-  && rm libraries/lzma/lzma/0.0.1/lzma-0.0.1.jar \
-  && rm libraries/org/scala-lang/plugins/scala-continuations-plugin_2.11.1/1.0.2/scala-continuations-plugin_2.11.1-1.0.2.jar \
-  && rm libraries/java3d/vecmath/1.5.2/vecmath-1.5.2.jar \
+  && bash delete-libraries.sh \
   && rm mods/auto-closer.jar
-# remove libraries by mojang (disallowed by terms):
-#   net/minecraft/1.12.2/minecraft_server.1.12.2.jar        minecraft server
-#   net/minecraft/launchwrapper/1.12/launchwrapper-1.12.jar launchwrapper
-# remove unknown libraries:
-#   lzma/lzma/0.0.1/lzma-0.0.1.jar
-#       this may be traditonal versions of LZMA SDK (https://sourceforge.net/projects/p7zip/files/java_lzma/0.90/)
-#   org/scala-lang/plugins/scala-continuations-plugin_2.11.1/1.0.2/scala-continuations-plugin_2.11.1-1.0.2.jar
-#       I can't get library with same hash
-#   java3d/vecmath/1.5.2/vecmath-1.5.2.jar
-#       java3d vecmath (I can't get original so I remove)
 
 FROM alpine as bundler
 
