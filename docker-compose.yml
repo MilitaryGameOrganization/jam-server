@@ -1,9 +1,8 @@
 version: '3'
 services:
   jam-server:
-    build: .
+    image: ghcr.io/militarygameorganization/jam-server
     restart: unless-stopped
-    image: jam-server
     tty: true
     stdin_open: true
     ports:
