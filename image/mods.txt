@@ -108,6 +108,9 @@ mod mekanism from curse mekanism
 server mod version-checker from url "https://github.com/noyciy7037/MCMods-Version-Checker/releases/download/$version/ModsVersionChecker-$version.jar"
     version 1.0.0
 
+server mod asta-all-config-syncer from url "https://github.com/freedom-mod-development-community/asta-all-config-syncer/releases/download/$version/asta-all-config-syncer-$version.jar"
+    version 0.0.1
+
 # client-only optional mods
 
 # TODO: check if it is static or not
