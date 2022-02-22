@@ -5,10 +5,10 @@
 trap '
     echo "server stopping..." >&2;
     {
-        /rcon-cli/rcon-cli --address localhost:25575 --password rcon "say server stopping in 5 seconds";
+        /server/rcon-cli --address localhost:25575 --password rcon "say server stopping in 5 seconds";
         sleep 5;
-        /rcon-cli/rcon-cli --address localhost:25575 --password rcon save-all;
-        /rcon-cli/rcon-cli --address localhost:25575 --password rcon stop
+        /server/rcon-cli --address localhost:25575 --password rcon save-all;
+        /server/rcon-cli --address localhost:25575 --password rcon stop
     } || {
         echo "cannot use stop command; fall back to kill command" >&2;
         kill $pid
@@ -22,6 +22,13 @@ PAUSE="${PAUSE:-100}"
 mkdir -p /save/world
 mkdir -p /save/logs
 mkdir -p /save/crash-reports
+
+# download mods
+java -jar mod-downloader.jar \
+    --server \
+    --config mods.txt \
+    --dest mods \
+    || exit 1;
 
 java -Xms"$HEAP" -XX:MetaspaceSize=2048m -XX:MaxMetaspaceSize=2048m \
     -XX:+OptimizeStringConcat -XX:+AggressiveOpts \
