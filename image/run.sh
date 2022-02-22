@@ -25,6 +25,7 @@ mkdir -p /save/crash-reports
 
 # download mods
 java -jar mod-downloader.jar \
+    --force \
     --server \
     --config mods.txt \
     --dest mods \
