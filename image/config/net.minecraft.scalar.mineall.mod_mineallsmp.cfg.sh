@@ -5,10 +5,19 @@ set -e
 BLOCKS="gold_ore, iron_ore, coal_ore, lapis_ore, obsidian, diamond_ore, redstone_ore, lit_redstone_ore, glowstone, emerald_ore, quartz_ore"
 BLOCKS="$BLOCKS, stone:granite, stone:smooth_granite, stone:diorite, stone:smooth_diorite, stone:andesite, stone:smooth_andesite"
 
+ITEMS="iron_pickaxe, wooden_pickaxe, stone_pickaxe, diamond_pickaxe, golden_pickaxe"
+
 add_block() {
     for var in "$@"
     do
         BLOCKS="$BLOCKS, $var"
+    done
+}
+
+add_item() {
+    for var in "$@"
+    do
+        ITEMS="$ITEMS, $var"
     done
 }
 
@@ -33,6 +42,19 @@ add_block mekanism:oreblock
 
 add_block projectred-exploration:ore:{ruby_ore,sapphire_ore,peridot_ore,copper_ore,tin_ore,silver_ore,electrotine_ore}
 add_block ic2:resource
+
+# items
+
+add_item ic2:{bronze_pickaxe,drill,diamond_drill,iridium_drill}
+add_item thermalfoundation:tool.pickaxe_{copper,tin,silver,lead,aluminum,nickel,platinum,steel,electrum,invar,bronze,constantan}
+add_item immersiveengineering:pickaxe_steel
+add_item projectred-exploration:{ruby,sapphire,peridot}_pickaxe
+add_item appliedenergistics2:{certus,nether}_quartz_pickaxe
+add_item botania:{glass,manasteel,elementium}pick
+add_item galacticraftcore:steel_pickaxe
+add_item galacticraftplanets:{titanium,volcanic}_pickaxe
+add_item galacticraftplanets:{desh_pick,desh_pick_slime}
+add_item railcraft:tool_pickaxe_steel
 
 cat <<EOF > net.minecraft.scalar.mineall.mod_mineallsmp.cfg
 # Configuration file
@@ -67,6 +89,6 @@ general {
     S:channelName=mod_MineAll
 
     # String: "iron_pickaxe, wooden_pickaxe, stone_pickaxe, diamond_pickaxe, golden_pickaxe"
-    S:itemIds=iron_pickaxe, wooden_pickaxe, stone_pickaxe, diamond_pickaxe, golden_pickaxe
+    S:itemIds=$ITEMS
 }
 EOF
