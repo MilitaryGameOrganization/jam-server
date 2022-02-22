@@ -10,22 +10,32 @@ services:
       - "25583:25575" # rcon
 #      - "25582:9225"  # Prometheus(http)
     volumes:
-# TODO: use volume
-      - "./save:/save"
+      - type: volume
+        source: saves
+        target: /save
+        volume:
+          nocopy: true
   jam-auto-save:
     image: ghcr.io/anatawa12/game-save-backuper
     restart: unless-stopped
     stop_grace_period: 30s
     volumes:
-      - "./backups:/backups"
-      - "./save:/save:ro"
+      - type: volume
+        source: backups
+        target: /backups
+        read_only: true
+      - type: volume
+        source: saves
+        target: /save
+        volume:
+          nocopy: true
     environment:
       GAME_CONFIG_YAML: |
         preset: minecraft
         rcon_address: jam-server:25575
         rcon_password: rcon
         backup_dir: /backups
-        save_dir: /save
+        save_dir: /save/world
         backups:
           - name: hourly
             interval: hourly
@@ -42,6 +52,12 @@ services:
           - name: yearly
             interval: yearly
             max_backups: 999
+
+volumes:
+  saves:
+    driver: local
+  backups:
+    driver: local
 
 #  discord-rcon:
 #    image: ghcr.io/anatawa12/discord-rcon
