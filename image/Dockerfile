@@ -37,6 +37,11 @@ RUN curl -L "https://mohistmc.com/builds/1.12.2/mohist-1.12.2-$MOHIST_VERSION-se
   && bash delete-libraries.sh \
   && rm mods/auto-closer.jar
 
+FROM bash as config-gen
+
+COPY config/net.minecraft.scalar.mineall.mod_mineallsmp.cfg.sh      /net.minecraft.scalar.mineall.mod_mineallsmp.cfg.sh
+RUN /net.minecraft.scalar.mineall.mod_mineallsmp.cfg.sh
+
 FROM alpine as bundler
 
 WORKDIR /server
@@ -68,6 +73,9 @@ COPY --from=library-downloader /server/whitelist.json      /server/whitelist.jso
 COPY --from=downloader         /mod-downloader.jar         /server/mod-downloader.jar
 COPY --from=downloader         /rcon-cli                   /server/rcon-cli
 COPY                           mods.txt                    /server/mods.txt
+
+# override configs
+COPY --from=config-gen /net.minecraft.scalar.mineall.mod_mineallsmp.cfg /server/config/net.minecraft.scalar.mineall.mod_mineallsmp.cfg
 
 FROM eclipse-temurin:8-jdk
 
