@@ -42,6 +42,9 @@ FROM bash as config-gen
 COPY config/net.minecraft.scalar.mineall.mod_mineallsmp.cfg.sh      /net.minecraft.scalar.mineall.mod_mineallsmp.cfg.sh
 RUN /net.minecraft.scalar.mineall.mod_mineallsmp.cfg.sh
 
+COPY config/net.minecraft.scalar.cutall.mod_cutallsmp.cfg.sh /net.minecraft.scalar.cutall.mod_cutallsmp.cfg.sh
+RUN /net.minecraft.scalar.cutall.mod_cutallsmp.cfg.sh
+
 FROM alpine as bundler
 
 WORKDIR /server
@@ -76,6 +79,7 @@ COPY                           mods.txt                    /server/mods.txt
 
 # override configs
 COPY --from=config-gen /net.minecraft.scalar.mineall.mod_mineallsmp.cfg /server/config/net.minecraft.scalar.mineall.mod_mineallsmp.cfg
+COPY --from=config-gen /net.minecraft.scalar.cutall.mod_cutallsmp.cfg   /server/config/net.minecraft.scalar.cutall.mod_cutallsmp.cfg
 
 FROM eclipse-temurin:8-jdk
 
