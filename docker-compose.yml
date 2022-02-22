@@ -15,6 +15,8 @@ services:
         target: /save
         volume:
           nocopy: true
+    cap_add:
+      - SYS_PTRACE
   jam-auto-save:
     image: ghcr.io/anatawa12/game-save-backuper
     restart: unless-stopped
