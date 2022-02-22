@@ -25,10 +25,10 @@ services:
       - type: volume
         source: backups
         target: /backups
-        read_only: true
       - type: volume
         source: saves
         target: /save
+        read_only: true
         volume:
           nocopy: true
     environment:
