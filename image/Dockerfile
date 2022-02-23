@@ -45,6 +45,12 @@ RUN /net.minecraft.scalar.mineall.mod_mineallsmp.cfg.sh
 COPY config/net.minecraft.scalar.cutall.mod_cutallsmp.cfg.sh /net.minecraft.scalar.cutall.mod_cutallsmp.cfg.sh
 RUN /net.minecraft.scalar.cutall.mod_cutallsmp.cfg.sh
 
+COPY ops.json.sh /ops.json.sh
+RUN /ops.json.sh
+
+COPY whitelist.json.sh /whitelist.json.sh
+RUN /whitelist.json.sh
+
 FROM alpine as bundler
 
 WORKDIR /server
@@ -62,7 +68,7 @@ COPY --from=library-downloader /server/libraries           /server/libraries
 #COPY --from=mods-downloader    /mods                       /server/mods
 COPY --from=library-downloader /server/mohist-config       /server/mohist-config
 COPY --from=library-downloader /server/mohist.jar          /server/mohist.jar
-COPY --from=library-downloader /server/ops.json            /server/ops.json
+#COPY --from=library-downloader /server/ops.json            /server/ops.json
 #COPY --from=library-downloader /server/paper.yml           /server/paper.yml
 #COPY --from=library-downloader /server/permissions.yml     /server/permissions.yml
 COPY --from=library-downloader /server/plugins             /server/plugins
@@ -70,7 +76,7 @@ COPY --from=library-downloader /server/server.properties   /server/server.proper
 #COPY --from=library-downloader /server/snapshots-server    /server/snapshots-server
 #COPY --from=library-downloader /server/spigot.yml          /server/spigot.yml
 #COPY --from=library-downloader /server/usercache.json      /server/usercache.json
-COPY --from=library-downloader /server/whitelist.json      /server/whitelist.json
+#COPY --from=library-downloader /server/whitelist.json      /server/whitelist.json
 
 # tools
 COPY --from=downloader         /mod-downloader.jar         /server/mod-downloader.jar
@@ -80,6 +86,9 @@ COPY                           mods.txt                    /server/mods.txt
 # override configs
 COPY --from=config-gen /net.minecraft.scalar.mineall.mod_mineallsmp.cfg /server/config/net.minecraft.scalar.mineall.mod_mineallsmp.cfg
 COPY --from=config-gen /net.minecraft.scalar.cutall.mod_cutallsmp.cfg   /server/config/net.minecraft.scalar.cutall.mod_cutallsmp.cfg
+
+COPY --from=config-gen /ops.json          /server/ops.json
+COPY --from=config-gen /whitelist.json    /server/whitelist.json
 
 FROM eclipse-temurin:8-jdk
 
