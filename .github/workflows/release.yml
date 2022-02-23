@@ -67,6 +67,8 @@ jobs:
             ghcr.io/militarygameorganization/jam-server:latest
 
       - name: tag & push release
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git tag "$VERSION"
           git push origin "$VERSION"
