@@ -20,6 +20,7 @@ add_user 87229700-66c8-4436-8cbc-f288b7bae8ec seemense
 add_user c3e91197-2db1-4e2d-9267-cdefbe84caba kuma_yamamoto
 add_user 899329f1-a457-4427-aa9c-ab86ee8a7416 noyciy7037
 add_user 6682c0b9-3ce3-4cae-84b4-e6ffc42e664d subaru1572
+add_user 7f98a71c-e894-4973-8a20-0f38a741e680 Yukikaze_Scarlet
 
 
 echo "[
