@@ -18,6 +18,7 @@ add_user 0ee944a1-4a15-488c-9ef0-8edae0bfd128 Alice1537
 add_user 52806416-f227-49ef-8fd8-0fca389c793a kaka_256
 add_user 87229700-66c8-4436-8cbc-f288b7bae8ec seemense
 add_user c3e91197-2db1-4e2d-9267-cdefbe84caba kuma_yamamoto
+add_user 899329f1-a457-4427-aa9c-ab86ee8a7416 noyciy7037
 
 
 echo "[
