@@ -13,6 +13,7 @@ add_user() {
 }
 
 add_user 6cde5c61-9493-4726-b580-a74e751e5eb4 4 anatawa12 true
+add_user 0ee944a1-4a15-488c-9ef0-8edae0bfd128 3 Alice1537 true
 
 echo "[
 $JSON_BODY
