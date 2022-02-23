@@ -64,7 +64,7 @@ jobs:
             linux/arm64
           tags: |-
             ghcr.io/militarygameorganization/jam-server:${{ env.VERSION }}
-            ghcr.io/militarygameorganization/jam-serverr:latest
+            ghcr.io/militarygameorganization/jam-server:latest
 
       - name: tag & push release
         run: |
