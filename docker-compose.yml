@@ -11,6 +11,9 @@ services:
 #      - "25582:9225"  # Prometheus(http)
     volumes:
       - type: volume
+        source: mods
+        target: /server/mods
+      - type: volume
         source: saves
         target: /save
         volume:
@@ -59,6 +62,9 @@ volumes:
   saves:
     driver: local
   backups:
+    driver: local
+  # mods volume for mods cache
+  mods:
     driver: local
 
 #  discord-rcon:
