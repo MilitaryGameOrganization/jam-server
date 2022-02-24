@@ -47,7 +47,7 @@ jobs:
           curl -L "https://github.com/anatawa12/mod-downloader/releases/download/v${DOWNLOADER_VERSION}/mod-downloader-${DOWNLOADER_VERSION}.jar" \
               > mod-downloader-gen.jar
           java -jar mod-downloader-gen.jar --new-embed \
-              --url "https://github.com/MilitaryGameOrganization/JAMServer/raw/HEAD/image/mods.txt" \
+              --url "https://github.com/MilitaryGameOrganization/jam-server/raw/HEAD/image/mods.txt" \
               --name "JAM Server" \
               --dest ./mod-downloader.jar
 
