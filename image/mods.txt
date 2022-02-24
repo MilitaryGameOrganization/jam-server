@@ -113,9 +113,8 @@ server mod asta-all-config-syncer from url "https://github.com/freedom-mod-devel
 
 # client-only optional mods
 
-# TODO: check if it is static or not
-# optional client mod optifine from url "https://optifine.net/downloadx?f=OptiFine_1.12.2_$version.jar&x=6093fa54e153275b3ea908481d739445"
-#     version HD_U_G5
+optional client mod optifine from optifine
+    version 1.12.2_HD_U_G5
 
 optional client mod intelli-input from url "http://mcc.mcsv.jp/Files/IntelliInput/IntelliInput-$version-for1.12.2.jar"
     version 2.6
