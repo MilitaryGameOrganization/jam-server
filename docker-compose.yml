@@ -7,9 +7,7 @@ services:
     stdin_open: true
     stop_grace_period: 100s
     ports:
-      - "25581:25565" # minecraft
-      - "25583:25575" # rcon
-#      - "25582:9225"  # Prometheus(http)
+      - "21676:25565" # minecraft
     volumes:
       - type: volume
         source: mods
