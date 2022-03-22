@@ -38,6 +38,7 @@ java -Xms"$HEAP" -XX:MetaspaceSize=2048m -XX:MaxMetaspaceSize=2048m \
     -Dfml.queryResult=confirm \
     -verbose:gc -XX:+PrintGCDateStamps \
     -Xloggc:logs/gc-$(date --iso-8601=seconds | sed 's/[-:T+]//g').log \
+    -Dlog4j.configurationFile=log4j2.xml\
     -jar mohist.jar nogui \
     < /dev/stdin > /dev/stdout &
 

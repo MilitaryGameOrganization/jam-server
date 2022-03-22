@@ -22,6 +22,7 @@ FROM eclipse-temurin:8-jdk as library-downloader
 WORKDIR /server
 
 COPY server.properties /server/server.properties
+COPY log4j2.xml /server/log4j2.xml
 COPY delete-libraries.sh /server/delete-libraries.sh
 
 ARG MOHIST_VERSION
@@ -64,6 +65,7 @@ COPY --from=library-downloader /server/config              /server/config
 COPY --from=library-downloader /server/eula.txt            /server/eula.txt
 #COPY --from=library-downloader /server/help.yml            /server/help.yml
 COPY --from=library-downloader /server/libraries           /server/libraries
+COPY --from=library-downloader /server/log4j2.xml           /server/log4j2.xml
 #COPY --from=library-downloader /server/logs                /server/logs
 #COPY --from=mods-downloader    /mods                       /server/mods
 COPY --from=library-downloader /server/mohist-config       /server/mohist-config
