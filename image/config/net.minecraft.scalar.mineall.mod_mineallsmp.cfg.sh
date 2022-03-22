@@ -3,7 +3,8 @@
 set -e
 
 BLOCKS="gold_ore, iron_ore, coal_ore, lapis_ore, obsidian, diamond_ore, redstone_ore, lit_redstone_ore, glowstone, emerald_ore, quartz_ore"
-BLOCKS="$BLOCKS, stone:granite, stone:smooth_granite, stone:diorite, stone:smooth_diorite, stone:andesite, stone:smooth_andesite"
+# removed from original: stone variants
+#BLOCKS="$BLOCKS, stone:granite, stone:smooth_granite, stone:diorite, stone:smooth_diorite, stone:andesite, stone:smooth_andesite"
 
 ITEMS="iron_pickaxe, wooden_pickaxe, stone_pickaxe, diamond_pickaxe, golden_pickaxe"
 
