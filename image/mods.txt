@@ -1,3 +1,5 @@
+version 0.0.9
+
 mod industrial-craft2-experimental from curse industrial-craft
     version 2746892 (2.8.170-ex112)
 
