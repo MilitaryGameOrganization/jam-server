@@ -47,7 +47,7 @@ jobs:
           curl -L "https://github.com/anatawa12/mod-downloader/releases/download/v${DOWNLOADER_VERSION}/mod-downloader-${DOWNLOADER_VERSION}.jar" \
               > mod-downloader-gen.jar
           java -jar mod-downloader-gen.jar --new-embed \
-              --url "https://github.com/MilitaryGameOrganization/jam-server/raw/HEAD/image/mods.txt" \
+              --url "https://github.com/MilitaryGameOrganization/jam-server/releases/latest/mods.txt" \
               --name "JAM Server" \
               --dest ./mod-downloader.jar
 
@@ -78,3 +78,4 @@ jobs:
           git push origin "$VERSION"
           gh release create "$VERSION" --notes "release on $(git rev-parse HEAD)"
           gh release upload "$VERSION" "mod-downloader.jar"
+          gh release upload "$VERSION" "image/mods.txt"
