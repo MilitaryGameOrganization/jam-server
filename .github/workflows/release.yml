@@ -79,3 +79,4 @@ jobs:
           gh release create "$VERSION" --notes "release on $(git rev-parse HEAD)"
           gh release upload "$VERSION" "mod-downloader.jar"
           gh release upload "$VERSION" "image/mods.txt"
+          gh release upload "$VERSION" "docker-compose.yml"
