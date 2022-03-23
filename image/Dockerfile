@@ -33,6 +33,7 @@ RUN curl -L "https://mohistmc.com/builds/1.12.2/mohist-1.12.2-$MOHIST_VERSION-se
   && mkdir mods \
   && curl -L "https://github.com/anatawa12/minecraft-server-auto-closer/releases/download/$CLOSER_VERSION/minecraft-server-auto-closer-$CLOSER_VERSION.jar" \
     > mods/auto-closer.jar \
+  && mkdir config \
   && echo "before world" > config/minecraft-server-auto-closer.txt \
   && echo "eula=true" > eula.txt \
   && timeout 600s java -Xmx2G -jar mohist.jar \
