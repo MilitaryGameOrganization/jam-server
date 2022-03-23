@@ -5,6 +5,10 @@
 trap '
     echo "server stopping..." >&2;
     {
+        /server/rcon-cli --address localhost:25575 --password rcon "say server stopping in 30 seconds";
+        sleep 15;
+        /server/rcon-cli --address localhost:25575 --password rcon "say server stopping in 15 seconds";
+        sleep 10;
         /server/rcon-cli --address localhost:25575 --password rcon "say server stopping in 5 seconds";
         sleep 5;
         /server/rcon-cli --address localhost:25575 --password rcon save-all;
