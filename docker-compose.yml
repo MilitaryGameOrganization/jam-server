@@ -47,11 +47,11 @@ services:
 
           - name: daily
             interval: daily
-            max_backups: 24
+            max_backups: 40
 
           - name: monthly
             interval: monthly
-            max_backups: 40
+            max_backups: 24
 
           - name: yearly
             interval: yearly
