@@ -113,6 +113,9 @@ mod asta-all-config-syncer from url "https://github.com/freedom-mod-development-
 server mod version-checker from url "https://github.com/noyciy7037/MCMods-Version-Checker/releases/download/$version/ModsVersionChecker-$version.jar"
     version 1.0.0
 
+server mod journey-map-server from curse 32274
+    version 2916002 (5.7.1)
+
 # client-only optional mods
 
 optional client mod optifine from optifine
