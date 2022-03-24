@@ -124,3 +124,5 @@ optional client mod intelli-input from url "http://mcc.mcsv.jp/Files/IntelliInpu
 optional client mod cocoa-input from curse 259700
     version 2540534 (3.1.5)
 
+optional client mod jei from curse 238222
+    version 3040523 (4.16.1.301)
