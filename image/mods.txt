@@ -126,3 +126,6 @@ optional client mod cocoa-input from curse 259700
 
 optional client mod jei from curse 238222
     version 3040523 (4.16.1.301)
+
+optional client mod journey-map from curse 32274
+    version 2916002 (5.7.1)
