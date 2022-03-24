@@ -108,6 +108,9 @@ mod mekanism from curse mekanism
 mod asta-all-config-syncer from url "https://github.com/freedom-mod-development-community/asta-all-config-syncer/releases/download/$version/asta-all-config-syncer-$version.jar"
     version 0.0.1
 
+mod jei from curse 238222
+    version 3040523 (4.16.1.301)
+
 # server mod
 
 server mod version-checker from url "https://github.com/noyciy7037/MCMods-Version-Checker/releases/download/$version/ModsVersionChecker-$version.jar"
@@ -126,9 +129,6 @@ optional client mod intelli-input from url "http://mcc.mcsv.jp/Files/IntelliInpu
 
 optional client mod cocoa-input from curse 259700
     version 2540534 (3.1.5)
-
-optional client mod jei from curse 238222
-    version 3040523 (4.16.1.301)
 
 optional client mod journey-map from curse 32274
     version 2916002 (5.7.1)
