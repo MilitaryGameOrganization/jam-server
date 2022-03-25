@@ -105,6 +105,9 @@ mod thermal-expansion from curse thermal-foundation
 mod mekanism from curse mekanism
     version 2835175 (9.8.3.390)
 
+mod mekanism-generators from curse 268566
+    version 2835177 (9.8.3.390)
+
 mod asta-all-config-syncer from url "https://github.com/freedom-mod-development-community/asta-all-config-syncer/releases/download/$version/asta-all-config-syncer-$version.jar"
     version 0.0.1
 
