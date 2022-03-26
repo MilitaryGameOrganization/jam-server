@@ -42,8 +42,8 @@ services:
         save_dir: /save/world
         backups:
           - name: hourly
-            interval: hourly
-            max_backups: 30
+            interval: 10 minutely
+            max_backups: 180 # 30h * 6/h
 
           - name: daily
             interval: daily
