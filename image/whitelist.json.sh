@@ -22,6 +22,7 @@ add_user 899329f1-a457-4427-aa9c-ab86ee8a7416 noyciy7037
 add_user 6682c0b9-3ce3-4cae-84b4-e6ffc42e664d subaru1572
 add_user 7f98a71c-e894-4973-8a20-0f38a741e680 Yukikaze_Scarlet
 add_user 344c695a-558e-4a41-ba29-82036b3d6369 icefire7
+add_user a9875e0d-b734-4b0c-8074-45971ed8e61c sagen_eins
 
 
 echo "[
