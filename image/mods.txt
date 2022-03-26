@@ -114,6 +114,9 @@ mod asta-all-config-syncer from url "https://github.com/freedom-mod-development-
 mod jei from curse 238222
     version 3040523 (4.16.1.301)
 
+mod additional-enchanted-miner from curse 282837
+    version 3611879 (12.5.6)
+
 # server mod
 
 server mod version-checker from url "https://github.com/noyciy7037/MCMods-Version-Checker/releases/download/$version/ModsVersionChecker-$version.jar"
