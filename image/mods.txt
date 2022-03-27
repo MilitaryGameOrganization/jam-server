@@ -117,6 +117,12 @@ mod jei from curse 238222
 mod additional-enchanted-miner from curse 282837
     version 3611879 (12.5.6)
 
+mod akuto-engine from curse 278276
+    version 3532353 (2.0.13)
+
+mod akutolib from curse 304964
+    version 3097735 (3.0.1)
+
 # server mod
 
 server mod version-checker from url "https://github.com/noyciy7037/MCMods-Version-Checker/releases/download/$version/ModsVersionChecker-$version.jar"
