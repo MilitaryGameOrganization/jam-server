@@ -144,3 +144,6 @@ optional client mod cocoa-input from curse 259700
 
 optional client mod journey-map from curse 32274
     version 2916002 (5.7.1)
+
+optional client mod hwyla from curse 253449
+    version 2568751 (1.8.26)
